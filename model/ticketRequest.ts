@@ -44,6 +44,8 @@ export class TicketRequest {
     */
     'ticket_type'?: string | null;
     'account'?: string | null;
+    'contact'?: string | null;
+    'parent_ticket'?: string | null;
     'attachments'?: Array<string>;
     'tags'?: Array<string>;
     /**
@@ -101,6 +103,16 @@ export class TicketRequest {
         {
             "name": "account",
             "baseName": "account",
+            "type": "string"
+        },
+        {
+            "name": "contact",
+            "baseName": "contact",
+            "type": "string"
+        },
+        {
+            "name": "parent_ticket",
+            "baseName": "parent_ticket",
             "type": "string"
         },
         {

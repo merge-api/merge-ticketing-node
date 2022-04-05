@@ -10,6 +10,8 @@ export * from './availableActionsApi';
 import { AvailableActionsApi } from './availableActionsApi';
 export * from './commentsApi';
 import { CommentsApi } from './commentsApi';
+export * from './contactsApi';
+import { ContactsApi } from './contactsApi';
 export * from './deleteAccountApi';
 import { DeleteAccountApi } from './deleteAccountApi';
 export * from './forceResyncApi';
@@ -28,8 +30,6 @@ export * from './projectsApi';
 import { ProjectsApi } from './projectsApi';
 export * from './regenerateKeyApi';
 import { RegenerateKeyApi } from './regenerateKeyApi';
-export * from './rolesApi';
-import { RolesApi } from './rolesApi';
 export * from './syncStatusApi';
 import { SyncStatusApi } from './syncStatusApi';
 export * from './tagsApi';
@@ -53,4 +53,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AccountDetailsApi, AccountTokenApi, AccountsApi, AttachmentsApi, AvailableActionsApi, CommentsApi, DeleteAccountApi, ForceResyncApi, GenerateKeyApi, IssuesApi, LinkTokenApi, LinkedAccountsApi, PassthroughApi, ProjectsApi, RegenerateKeyApi, RolesApi, SyncStatusApi, TagsApi, TeamsApi, TicketsApi, UsersApi, WebhookReceiversApi];
+export const APIS = [AccountDetailsApi, AccountTokenApi, AccountsApi, AttachmentsApi, AvailableActionsApi, CommentsApi, ContactsApi, DeleteAccountApi, ForceResyncApi, GenerateKeyApi, IssuesApi, LinkTokenApi, LinkedAccountsApi, PassthroughApi, ProjectsApi, RegenerateKeyApi, SyncStatusApi, TagsApi, TeamsApi, TicketsApi, UsersApi, WebhookReceiversApi];

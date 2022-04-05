@@ -291,7 +291,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * Returns an `User` object with the given `id`.
+     * Returns a `User` object with the given `id`.
      * @param xAccountToken Token identifying the end user.
      * @param id 
      * @param cursor The pagination cursor value.
@@ -299,7 +299,7 @@ export class ProjectsApi {
      * @param includeRemoteData Whether to include the original data Merge fetched from the third-party to produce these models.
      * @param pageSize Number of results to return per page.
      */
-    public async projectsUsersList (xAccountToken: string, id: string, cursor?: number, expand?: 'role' | 'teams' | 'teams,role', includeRemoteData?: boolean, pageSize?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PaginatedUserList;  }> {
+    public async projectsUsersList (xAccountToken: string, id: string, cursor?: string, expand?: 'teams', includeRemoteData?: boolean, pageSize?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PaginatedUserList;  }> {
         const localVarPath = this.basePath + '/projects/{id}/users'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -324,11 +324,11 @@ export class ProjectsApi {
         }
 
         if (cursor !== undefined) {
-            localVarQueryParameters['cursor'] = ObjectSerializer.serialize(cursor, "number");
+            localVarQueryParameters['cursor'] = ObjectSerializer.serialize(cursor, "string");
         }
 
         if (expand !== undefined) {
-            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'role' | 'teams' | 'teams,role'");
+            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'teams'");
         }
 
         if (includeRemoteData !== undefined) {
