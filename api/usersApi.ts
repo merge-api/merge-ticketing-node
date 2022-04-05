@@ -104,7 +104,7 @@ export class UsersApi {
      * @param pageSize Number of results to return per page.
      * @param remoteId The API provider\&#39;s ID for the given object.
      */
-    public async usersList (xAccountToken: string, createdAfter?: Date, createdBefore?: Date, cursor?: string, expand?: 'role' | 'teams' | 'teams,role', includeDeletedData?: boolean, includeRemoteData?: boolean, modifiedAfter?: Date, modifiedBefore?: Date, pageSize?: number, remoteId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PaginatedUserList;  }> {
+    public async usersList (xAccountToken: string, createdAfter?: Date, createdBefore?: Date, cursor?: string, expand?: 'teams', includeDeletedData?: boolean, includeRemoteData?: boolean, modifiedAfter?: Date, modifiedBefore?: Date, pageSize?: number, remoteId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PaginatedUserList;  }> {
         const localVarPath = this.basePath + '/users';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -135,7 +135,7 @@ export class UsersApi {
         }
 
         if (expand !== undefined) {
-            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'role' | 'teams' | 'teams,role'");
+            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'teams'");
         }
 
         if (includeDeletedData !== undefined) {
@@ -212,13 +212,13 @@ export class UsersApi {
         });
     }
     /**
-     * Returns an `User` object with the given `id`.
+     * Returns a `User` object with the given `id`.
      * @param xAccountToken Token identifying the end user.
      * @param id 
      * @param expand Which relations should be returned in expanded form. Multiple relation names should be comma separated without spaces.
      * @param includeRemoteData Whether to include the original data Merge fetched from the third-party to produce these models.
      */
-    public async usersRetrieve (xAccountToken: string, id: string, expand?: 'role' | 'teams' | 'teams,role', includeRemoteData?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
+    public async usersRetrieve (xAccountToken: string, id: string, expand?: 'teams', includeRemoteData?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
         const localVarPath = this.basePath + '/users/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -243,7 +243,7 @@ export class UsersApi {
         }
 
         if (expand !== undefined) {
-            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'role' | 'teams' | 'teams,role'");
+            localVarQueryParameters['expand'] = ObjectSerializer.serialize(expand, "'teams'");
         }
 
         if (includeRemoteData !== undefined) {

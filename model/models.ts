@@ -16,6 +16,7 @@ export * from './comment';
 export * from './commentEndpointRequest';
 export * from './commentRequest';
 export * from './commentResponse';
+export * from './contact';
 export * from './dataPassthroughRequest';
 export * from './debugModeLog';
 export * from './debugModelLogSummary';
@@ -35,15 +36,14 @@ export * from './paginatedAccountDetailsAndActionsList';
 export * from './paginatedAccountList';
 export * from './paginatedAttachmentList';
 export * from './paginatedCommentList';
+export * from './paginatedContactList';
 export * from './paginatedIssueList';
 export * from './paginatedProjectList';
-export * from './paginatedRoleList';
 export * from './paginatedSyncStatusList';
 export * from './paginatedTagList';
 export * from './paginatedTeamList';
 export * from './paginatedTicketList';
 export * from './paginatedUserList';
-export * from './paginatedWebhookReceiverList';
 export * from './project';
 export * from './remoteData';
 export * from './remoteDataRequest';
@@ -51,7 +51,6 @@ export * from './remoteKey';
 export * from './remoteKeyForRegenerationRequest';
 export * from './remoteResponse';
 export * from './requestFormatEnum';
-export * from './role';
 export * from './syncStatus';
 export * from './syncStatusStatusEnum';
 export * from './tag';
@@ -98,6 +97,7 @@ import { Comment } from './comment';
 import { CommentEndpointRequest } from './commentEndpointRequest';
 import { CommentRequest } from './commentRequest';
 import { CommentResponse } from './commentResponse';
+import { Contact } from './contact';
 import { DataPassthroughRequest } from './dataPassthroughRequest';
 import { DebugModeLog } from './debugModeLog';
 import { DebugModelLogSummary } from './debugModelLogSummary';
@@ -117,15 +117,14 @@ import { PaginatedAccountDetailsAndActionsList } from './paginatedAccountDetails
 import { PaginatedAccountList } from './paginatedAccountList';
 import { PaginatedAttachmentList } from './paginatedAttachmentList';
 import { PaginatedCommentList } from './paginatedCommentList';
+import { PaginatedContactList } from './paginatedContactList';
 import { PaginatedIssueList } from './paginatedIssueList';
 import { PaginatedProjectList } from './paginatedProjectList';
-import { PaginatedRoleList } from './paginatedRoleList';
 import { PaginatedSyncStatusList } from './paginatedSyncStatusList';
 import { PaginatedTagList } from './paginatedTagList';
 import { PaginatedTeamList } from './paginatedTeamList';
 import { PaginatedTicketList } from './paginatedTicketList';
 import { PaginatedUserList } from './paginatedUserList';
-import { PaginatedWebhookReceiverList } from './paginatedWebhookReceiverList';
 import { Project } from './project';
 import { RemoteData } from './remoteData';
 import { RemoteDataRequest } from './remoteDataRequest';
@@ -133,7 +132,6 @@ import { RemoteKey } from './remoteKey';
 import { RemoteKeyForRegenerationRequest } from './remoteKeyForRegenerationRequest';
 import { RemoteResponse } from './remoteResponse';
 import { RequestFormatEnum, RequestFormatEnumExpected } from './requestFormatEnum';
-import { Role } from './role';
 import { SyncStatus } from './syncStatus';
 import { SyncStatusStatusEnum, SyncStatusStatusEnumExpected } from './syncStatusStatusEnum';
 import { Tag } from './tag';
@@ -189,6 +187,7 @@ let typeMap: {[index: string]: any} = {
     "CommentEndpointRequest": CommentEndpointRequest,
     "CommentRequest": CommentRequest,
     "CommentResponse": CommentResponse,
+    "Contact": Contact,
     "DataPassthroughRequest": DataPassthroughRequest,
     "DebugModeLog": DebugModeLog,
     "DebugModelLogSummary": DebugModelLogSummary,
@@ -205,22 +204,20 @@ let typeMap: {[index: string]: any} = {
     "PaginatedAccountList": PaginatedAccountList,
     "PaginatedAttachmentList": PaginatedAttachmentList,
     "PaginatedCommentList": PaginatedCommentList,
+    "PaginatedContactList": PaginatedContactList,
     "PaginatedIssueList": PaginatedIssueList,
     "PaginatedProjectList": PaginatedProjectList,
-    "PaginatedRoleList": PaginatedRoleList,
     "PaginatedSyncStatusList": PaginatedSyncStatusList,
     "PaginatedTagList": PaginatedTagList,
     "PaginatedTeamList": PaginatedTeamList,
     "PaginatedTicketList": PaginatedTicketList,
     "PaginatedUserList": PaginatedUserList,
-    "PaginatedWebhookReceiverList": PaginatedWebhookReceiverList,
     "Project": Project,
     "RemoteData": RemoteData,
     "RemoteDataRequest": RemoteDataRequest,
     "RemoteKey": RemoteKey,
     "RemoteKeyForRegenerationRequest": RemoteKeyForRegenerationRequest,
     "RemoteResponse": RemoteResponse,
-    "Role": Role,
     "SyncStatus": SyncStatus,
     "Tag": Tag,
     "Team": Team,

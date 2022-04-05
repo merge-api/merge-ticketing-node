@@ -14,22 +14,34 @@ import { RequestFile } from './models';
 import { RemoteData } from './remoteData';
 
 /**
-* # The Role Object ### Description The `Role` object is used to represent a role that can be assigned to users.  ### Usage Example TODO
+* # The Contact Object ### Description The `Contact` object is used to represent the customer, lead, or external user that a ticket is associated with.  ### Usage Example TODO
 */
-export class Role {
+export class Contact {
     'id'?: string;
     /**
     * The third-party API ID of the matching object.
     */
     'remote_id'?: string | null;
     /**
-    * The role\'s name.
+    * The contact\'s name.
     */
     'name'?: string | null;
     /**
-    * The role\'s type.
+    * The contact\'s email address.
     */
-    'role_type'?: string | null;
+    'email_address'?: string | null;
+    /**
+    * The contact\'s phone number.
+    */
+    'phone_number'?: string | null;
+    /**
+    * The contact\'s details.
+    */
+    'details'?: string | null;
+    /**
+    * The contact\'s account.
+    */
+    'account'?: string | null;
     'remote_data'?: Array<RemoteData> | null;
 
     static discriminator: string | undefined = undefined;
@@ -51,8 +63,23 @@ export class Role {
             "type": "string"
         },
         {
-            "name": "role_type",
-            "baseName": "role_type",
+            "name": "email_address",
+            "baseName": "email_address",
+            "type": "string"
+        },
+        {
+            "name": "phone_number",
+            "baseName": "phone_number",
+            "type": "string"
+        },
+        {
+            "name": "details",
+            "baseName": "details",
+            "type": "string"
+        },
+        {
+            "name": "account",
+            "baseName": "account",
             "type": "string"
         },
         {
@@ -62,7 +89,7 @@ export class Role {
         }    ];
 
     static getAttributeTypeMap() {
-        return Role.attributeTypeMap;
+        return Contact.attributeTypeMap;
     }
 }
 

@@ -34,7 +34,6 @@ export class User {
     * Whether or not the user is active.
     */
     'is_active'?: boolean | null;
-    'roles'?: Array<string>;
     'teams'?: Array<string>;
     'remote_data'?: Array<RemoteData> | null;
 
@@ -65,11 +64,6 @@ export class User {
             "name": "is_active",
             "baseName": "is_active",
             "type": "boolean"
-        },
-        {
-            "name": "roles",
-            "baseName": "roles",
-            "type": "Array<string>"
         },
         {
             "name": "teams",

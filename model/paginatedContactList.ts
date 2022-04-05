@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { Role } from './role';
+import { Contact } from './contact';
 
-export class PaginatedRoleList {
+export class PaginatedContactList {
     'next'?: string | null;
     'previous'?: string | null;
-    'results'?: Array<Role>;
+    'results'?: Array<Contact>;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,11 +34,11 @@ export class PaginatedRoleList {
         {
             "name": "results",
             "baseName": "results",
-            "type": "Array<Role>"
+            "type": "Array<Contact>"
         }    ];
 
     static getAttributeTypeMap() {
-        return PaginatedRoleList.attributeTypeMap;
+        return PaginatedContactList.attributeTypeMap;
     }
 }
 
